@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "p3BrRDCU+vY=",
+  "dgSpecHash": "IM6nb5FZqGs=",
   "success": true,
   "projectFilePath": "C:\\Users\\jason\\source\\repos\\PharmacyManagementSystem\\PharmacyManagementSystem\\PharmacyManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jason\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\jason\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
+    "C:\\Users\\jason\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\jason\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.7\\guna.ui2.winforms.2.0.4.7.nupkg.sha512",
     "C:\\Users\\jason\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\jason\\.nuget\\packages\\microsoft.bcl.cryptography\\8.0.0\\microsoft.bcl.cryptography.8.0.0.nupkg.sha512",

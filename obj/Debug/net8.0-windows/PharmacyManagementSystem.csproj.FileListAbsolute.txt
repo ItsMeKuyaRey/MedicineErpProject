@@ -66,3 +66,7 @@ C:\Users\jason\source\repos\PharmacyManagementSystem\PharmacyManagementSystem\ob
 C:\Users\jason\source\repos\PharmacyManagementSystem\PharmacyManagementSystem\obj\Debug\net8.0-windows\PharmacyManagementSystem.pdb
 C:\Users\jason\source\repos\PharmacyManagementSystem\PharmacyManagementSystem\obj\Debug\net8.0-windows\PharmacyManagementSystem.genruntimeconfig.cache
 C:\Users\jason\source\repos\PharmacyManagementSystem\PharmacyManagementSystem\obj\Debug\net8.0-windows\ref\PharmacyManagementSystem.dll
+C:\Users\jason\source\repos\PharmacyManagementSystem\PharmacyManagementSystem\obj\Debug\net8.0-windows\PharmacyManagementSystem.Properties.Resources.resources
+C:\Users\jason\source\repos\PharmacyManagementSystem\PharmacyManagementSystem\obj\Debug\net8.0-windows\PharmacyManagementSystem.sourcelink.json
+C:\Users\jason\source\repos\PharmacyManagementSystem\PharmacyManagementSystem\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll
+C:\Users\jason\source\repos\PharmacyManagementSystem\PharmacyManagementSystem\obj\Debug\net8.0-windows\PharmacyManagementSystem.MedicineInventoryUC.resources

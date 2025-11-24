@@ -18,13 +18,12 @@ namespace PharmacyManagementSystem
         {
             signInButton.Enabled = false;
 
-            string email = emailTextBox.Text.Trim();
+            string username = emailTextBox.Text.Trim();
             string password = passwordTextBox.Text.Trim();
 
-            if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
-                MessageBox.Show("Please enter both username and password.", "Required Fields Missing",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter both username and password.");
                 signInButton.Enabled = true;
                 return;
             }
@@ -33,51 +32,57 @@ namespace PharmacyManagementSystem
 
             try
             {
-                using SqlConnection conn = new SqlConnection(connectionString);
-                conn.Open();
-
-                string query = "SELECT Username FROM Accounts WHERE Username = @username AND Password = @password";
-
-                using SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@username", email);
-                cmd.Parameters.AddWithValue("@password", password);
-
-                using SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
-                    string loggedInUsername = reader["Username"].ToString()!;
+                    conn.Open();
 
-                    MessageBox.Show($"WELCOME! {loggedInUsername}", "Login Success",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    string query = "SELECT password FROM Accounts WHERE username=@username";
 
-                    this.Hide();
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
 
-                    DashboardForm mainForm = new DashboardForm(loggedInUsername);
-                    mainForm.FormClosed += (s, args) => this.Close();
-                    mainForm.Show();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string hashedPassword = reader["password"].ToString();
+
+                                bool isValid = BCrypt.Net.BCrypt.Verify(password, hashedPassword);
+
+                                if (isValid)
+                                {
+                                    MessageBox.Show("WELCOME! " + username);
+
+                                    this.Hide();
+                                    DashboardForm mainForm = new DashboardForm(username);
+                                    mainForm.FormClosed += (s, args) => this.Close();
+                                    mainForm.Show();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Invalid password.");
+                                    passwordTextBox.Clear();
+                                    passwordTextBox.Focus();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("Username not found.");
+                            }
+                        }
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Login Failed: Invalid username or password.", "Login Failed",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    passwordTextBox.Clear();
-                    passwordTextBox.Focus();
-                }
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show($"Database Error: {ex.Message}", "Connection Failure",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An unexpected error occurred: {ex.Message}", "Application Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error: " + ex.Message);
             }
             finally
             {
                 signInButton.Enabled = true;
             }
         }
+
     }
 }
