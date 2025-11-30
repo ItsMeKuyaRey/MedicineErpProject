@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 using BlazorApp3.Components;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -25,3 +26,22 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+=======
+namespace PharmacyManagementSystem
+{
+    internal static class Program
+    {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Form1());
+        }
+    }
+}
+>>>>>>> dc2a47bfc1448ba492495a5049c727f1c45c9b74
