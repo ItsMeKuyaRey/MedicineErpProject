@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IM6nb5FZqGs=",
+  "dgSpecHash": "T04H9juJ0x4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jason\\source\\repos\\PharmacyManagementSystem\\PharmacyManagementSystem\\PharmacyManagementSystem.csproj",
+  "projectFilePath": "C:\\Users\\jason\\source\\repos\\Medicine_ERP\\Medicine_ERP\\Medicine_ERP\\PharmacyManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jason\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\jason\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",

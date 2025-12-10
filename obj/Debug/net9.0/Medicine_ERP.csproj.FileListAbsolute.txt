@@ -1,0 +1,9 @@
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\Medicine_ERP.csproj.AssemblyReference.cache
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\Medicine_ERP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\Medicine_ERP.AssemblyInfoInputs.cache
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\Medicine_ERP.AssemblyInfo.cs
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\Medicine_ERP.csproj.CoreCompileInputs.cache
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\Medicine_ERP.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\Medicine_ERP.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jason\source\repos\Medicine_ERP\Medicine_ERP\obj\Debug\net9.0\Medicine_ERP.sourcelink.json

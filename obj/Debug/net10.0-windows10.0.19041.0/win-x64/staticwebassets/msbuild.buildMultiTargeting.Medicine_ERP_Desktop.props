@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Medicine_ERP_Desktop.props" />
+</Project>
